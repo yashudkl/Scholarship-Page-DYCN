@@ -1,0 +1,320 @@
+/* CSS Styles */
+
+/* Slider section begins */
+
+  /* Container Styling */
+  .slider-container {
+    --gr1d: rgba(241, 154, 62, 1);
+    --gr1l: rgba(241, 154, 62, 0.8);
+    --gr2d: rgba(48, 182, 111, 1);
+    --gr2l: rgba(48, 182, 111, 0.8);
+
+    background: linear-gradient(45deg, var(--gr2l) 0%, var(--gr1l) 60%, var(--gr1d) 100%);
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 100px;
+  }
+
+  /* Left Side Text Content */
+  .text-content {
+    flex: 1;
+    padding: 50px;
+    color:  white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .text-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .text-content p {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .apply-button {
+    background-color: orange;
+    font-size: 16px;
+    width: 120px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  /* Right Side Image */
+  .image-content {
+    flex: 1;
+  }
+
+  .image-content img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  /* Buttons */
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  
+  /* Indicator Dots Styles */
+  .dots-container {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #717171; /* Active dot color */
+  }
+  
+
+
+/* Slider Section Ends  */ 
+
+/* About me and Eligibility criteria taking 50% width each horizontally (grid used) */
+.parent-container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.scholarship-container {
+  grid-column: 1;
+}
+
+.sch-info {
+  grid-column: 2;
+  display: block;
+}
+/* About Scholarship Section Begins */
+.scholarship-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fdf7e7;
+  border: 1px solid #e0d1b8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.scholarship-title {
+  margin-right: auto;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #cc8400;
+}
+
+.scholarship-text {
+  font-size: 16px;
+  color: #6f5f45;
+  text-align: justify;
+}
+/* About Scholarship Section Ends */
+
+/* Eligibility Criteria and Admission Process Begins */
+.sch-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fdf7e7;
+  border: 1px solid #e0d1b8;
+  border-radius: 10px;
+  width: 40%; 
+}
+
+.list h2 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #cc8400;
+}
+
+.list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  padding: 10px;
+  border-bottom: 1px solid #d1c5a1;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.list li:hover {
+  background-color: #f9f4e4;
+  cursor: pointer;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+/* Eligibility Criteria and Admission Process Ends */
+
+/* Testimonials Section Begins */
+.testimonial-title {
+  padding-top: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #e0d1b8;
+  border-radius: 10px;
+  margin: 20px;
+  width: calc(33.33% - 40px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  color: #666;
+}
+/* Testimonials Section Ends */
+
+/* Donation Section Starts */
+.donation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fdf7e7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.donation-image {
+  width: 500px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.donation-content {
+  flex: 1;
+}
+
+.donation-quote {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #6f5f45;
+}
+
+.donate-button {
+  margin-left: 250px;
+  background-color: #e69500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.donate-button:hover {
+  background-color: #cc8400;
+}
+/* Donation Section Ends */
+* {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+/* Fonts size adjust */
+
