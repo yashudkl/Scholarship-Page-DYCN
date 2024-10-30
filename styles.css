@@ -141,6 +141,7 @@
   border: 1px solid #e0d1b8;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Transition for smooth zoom */
 }
 
 .scholarship-title {
@@ -156,7 +157,13 @@
   color: #6f5f45;
   text-align: justify;
 }
+/* Zoom effect when the pointer is over the container */
+.scholarship-container:hover {
+  transform: scale(1.05); /* Slight zoom-in */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
 /* About Scholarship Section Ends */
+
 
 /* Eligibility Criteria and Admission Process Begins */
 .sch-info {
@@ -173,8 +180,12 @@
   border: 1px solid #e0d1b8;
   border-radius: 10px;
   width: 40%; 
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;   /* Transition for smooth zoom */
 }
-
+.list:hover {
+  transform: scale(1.05); /* Slight zoom-in */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
 .list h2 {
   margin-top: 0;
   font-weight: bold;
