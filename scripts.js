@@ -36,3 +36,17 @@ setInterval(nextImage, 2000);
 
 // Initial image display
 showImage(currentIndex);
+
+const lists = document.querySelectorAll('.list');
+
+lists.forEach((list) => {
+  list.addEventListener('click', () => {
+    list.classList.add('zoom-in');
+
+    // Remove zoom-in class after 300ms to reset the animation
+    setTimeout(() => {
+      list.classList.remove('zoom-in');
+    }, 300);
+  });
+});
+

@@ -54,6 +54,10 @@
     cursor: pointer;
     text-align: center;
   }
+  .apply-button a{
+    color: white;
+    margin: 0px;
+  }
 
   /* Right Side Image */
   .image-content {
@@ -120,7 +124,9 @@
 .parent-container {
   display: grid; 
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 30px;
+  margin-left: 40px;
+  margin-top: 30px;
 }
 
 .scholarship-container {
@@ -131,32 +137,44 @@
   grid-column: 2;
   display: block;
 }
-/* About Scholarship Section Begins */
-.scholarship-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #fdf7e7;
-  border: 1px solid #e0d1b8;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 .scholarship-title {
   margin-right: auto;
   font-size: 24px;
   font-weight: bold;
+  font-family: 'Times New Roman';
   margin-bottom: 10px;
-  color: #cc8400;
+  color:  #eea215;
 }
 
 .scholarship-text {
   font-size: 16px;
-  color: #6f5f45;
+  color: black;
   text-align: justify;
 }
 /* About Scholarship Section Ends */
+/* About Scholarship Section Begins */
+.scholarship-container {
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid #e0d1b8;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  /* Transition for smooth zoom */
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Zoom effect when the pointer is over the container */
+.scholarship-container:hover {
+  transform: scale(1.05); /* Slight zoom-in */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
 
 /* Eligibility Criteria and Admission Process Begins */
 .sch-info {
@@ -169,10 +187,17 @@
 .list {
   margin: 20px;
   padding: 20px;
-  background-color: #fdf7e7;
+  background-color: white;
   border: 1px solid #e0d1b8;
   border-radius: 10px;
   width: 40%; 
+  
+  /* Transition for smooth zoom */
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.list:hover {
+  transform: scale(1.05); /* Slight zoom-in */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .list h2 {
@@ -207,6 +232,7 @@
   justify-content: center;
   padding: 20px;
 }
+
 /* Eligibility Criteria and Admission Process Ends */
 
 /* Testimonials Section Begins */
