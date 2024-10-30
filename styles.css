@@ -101,7 +101,7 @@
   /* Indicator Dots Styles */
   .dots-container {
     position: absolute;
-    bottom: 20px; /* Adjust as needed */
+    bottom: 20px; 
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -211,6 +211,124 @@
   background-color: #f9f4e4;
   cursor: pointer;
 }
+/* Eligibility Criteria and Admission Process Ends */
+
+
+
+
+/*Infographics section starts*/
+.infographic-container {
+  width: 1090px;
+  max-width: 90%;
+  margin: 20px auto;
+  background-color: rgb(251, 249, 237);
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(247, 170, 5, 0.872);
+  border: 2px solid #eaac02af; /* adds orange border */
+}
+h1 {
+text-align: center;
+margin-bottom: 20px;
+color: rgb(0, 149, 255);
+font-size: 2.5rem; 
+font-weight: bolder; 
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); /* added subtle gradient background */
+padding: 10px; 
+border-radius: 10px; 
+display: inline-block; 
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+font-family:'Courier New', Courier, monospace;
+}
+.infographic-section {
+  margin-bottom: 40px;
+}
+.radial-circle {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+.circle .c,
+.circle .fill {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  clip: rect(0, 75px, 150px, 0);
+}
+.circle .c.full {
+  clip: rect(0, 150px, 150px, 75px);
+  background: whitesmoke;
+  transform: rotate(calc(var(--percentage, 0) * 3.6deg));
+}
+.circle .c.half .fill {
+  clip: rect(0, 75px, 150px, 0);
+  background: whitesmoke;
+  transform: rotate(calc(var(--percentage, 0) * 3.6deg));
+}
+.circle[data-percentage="50"] .c.full {
+  transform: rotate(180deg);
+}
+.circle[data-percentage="50"] .c.half .fill {
+  transform: rotate(0deg);
+}
+.circle .inside-circle {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: rgb(190, 174, 2);
+  border-radius: 50%;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .circle {
+      width: 120px;
+      height: 120px;
+  }
+  .circle .inside-circle {
+      width: 90px;
+      height: 90px;
+      top: 15px;
+      left: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .infographic-container {
+      padding: 20px;
+  }
+  h1 {
+      font-size: 1.5rem;
+  }
+  .circle {
+      width: 100px;
+      height: 100px;
+  }
+  .circle .inside-circle {
+      width: 70px;
+      height: 70px;
+      top: 15px;
+      left: 15px;
+  }
+}
+ /*Infographics Section ends*/
+
+
+/* Testimonials Section Begins */
 
 .testimonial-container {
   display: flex;
@@ -218,9 +336,7 @@
   justify-content: center;
   padding: 20px;
 }
-/* Eligibility Criteria and Admission Process Ends */
 
-/* Testimonials Section Begins */
 .testimonial-title {
   padding-top: 30px;
   font-size: 24px;
