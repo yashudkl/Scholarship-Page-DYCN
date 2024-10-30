@@ -16,11 +16,16 @@
     position: relative;
     width: 100%;
     margin: auto;
-    height: 750px;
+    height: 550px;
     border: 2px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     margin-top: 100px;
+  }
+
+  /*While hover slider-buttons appears*/
+  .slider-container:hover .slider-btn {
+    opacity: 1;
   }
 
   /* Left Side Text Content */
@@ -78,6 +83,9 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
+    opacity: 0; /*keeping slider-button hidden until hover */
+    transition: opacity 0.3s ease; /*transition effect */
+ 
   }
 
   .prev-btn {
@@ -87,6 +95,7 @@
   .next-btn {
     right: 10px;
   }
+
 
   
   /* Indicator Dots Styles */
@@ -116,30 +125,20 @@
 
 /* Slider Section Ends  */ 
 
-/* About me and Eligibility criteria taking 50% width each horizontally (grid used) */
-.parent-container {
-  display: grid; 
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.scholarship-container {
-  grid-column: 1;
-}
-
-.sch-info {
-  grid-column: 2;
-  display: block;
-}
 /* About Scholarship Section Begins */
 .scholarship-container {
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 1133px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #fdf7e7;
+  background-color: #f9f9f9;
   border: 1px solid #e0d1b8;
   border-radius: 10px;
+  justify-content: center; /*horizontally centered */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Transition for smooth zoom */
 }
@@ -154,12 +153,12 @@
 
 .scholarship-text {
   font-size: 16px;
-  color: #6f5f45;
+  color: black;
   text-align: justify;
 }
 /* Zoom effect when the pointer is over the container */
 .scholarship-container:hover {
-  transform: scale(1.05); /* Slight zoom-in */
+  transform: scale(1.02); /* Slight zoom-in */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 /* About Scholarship Section Ends */
@@ -169,21 +168,22 @@
 .sch-info {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
+  margin-top: 8x;
 }
 
 .list {
   margin: 20px;
   padding: 20px;
-  background-color: #fdf7e7;
+  background-color: #f9f9f9;
   border: 1px solid #e0d1b8;
   border-radius: 10px;
   width: 40%; 
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;   /* Transition for smooth zoom */
 }
 .list:hover {
-  transform: scale(1.05); /* Slight zoom-in */
+  transform: scale(1.02); /* Slight zoom-in */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 .list h2 {
@@ -223,7 +223,7 @@
 /* Testimonials Section Begins */
 .testimonial-title {
   padding-top: 30px;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
