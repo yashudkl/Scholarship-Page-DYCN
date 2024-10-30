@@ -138,7 +138,7 @@
   background-color: #f9f9f9;
   border: 1px solid #e0d1b8;
   border-radius: 10px;
-  justify-content: center; /*horizontally centered */
+  justify-content: center; /* horizontally centered */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Transition for smooth zoom */
 }
@@ -155,6 +155,59 @@
   font-size: 16px;
   color: black;
   text-align: justify;
+}
+
+/* Zoom effect when the pointer is over the container */
+.scholarship-container:hover {
+  transform: scale(1.02); /* Slight zoom-in */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .scholarship-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .scholarship-title {
+    font-size: 22px;
+  }
+
+  .scholarship-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scholarship-container {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .scholarship-title {
+    font-size: 20px;
+  }
+
+  .scholarship-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scholarship-container {
+    padding: 8px;
+    max-width: 100%;
+  }
+
+  .scholarship-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .scholarship-text {
+    font-size: 13px;
+  }
 }
 /* Zoom effect when the pointer is over the container */
 .scholarship-container:hover {
