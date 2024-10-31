@@ -120,7 +120,7 @@
 
 /* Slider Section Ends  */ 
 
-/* About me and Eligibility criteria taking 50% width each horizontally (grid used) */
+/* About section and Eligibility criteria taking 50% width each horizontally (grid used) */
 .parent-container {
   display: grid; 
   grid-template-columns: 1fr 1fr;
